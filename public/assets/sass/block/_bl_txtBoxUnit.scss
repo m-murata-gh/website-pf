@@ -1,0 +1,17 @@
+@use "settings/global" as gl;
+
+.bl_txtBoxUnit {
+
+  &>*:nth-child(n+2) {
+    padding-top: gl.$vr-rem * 2;
+    @include gl.media-md {
+      padding-top: unset;
+    }
+  }
+
+  @include gl.media-md {
+    &>*:nth-child(n+2)>* {
+      padding-top: gl.$vr-rem * 2;
+    }
+  }
+}

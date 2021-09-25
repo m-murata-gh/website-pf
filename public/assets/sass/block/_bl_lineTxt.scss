@@ -1,0 +1,76 @@
+@use "settings/global" as gl;
+
+.bl_lineTxt {
+
+  &_inner {
+    position: relative;
+
+    // ライン部分
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      transform: translate3d(0, 0, 1); // ios対策
+      width: 100%;
+      height: gl.$bw-thin;
+      background-color: gl.$theme-color-base;
+      transform: translateY(-50%);
+    }
+  }
+
+  &_cont {
+    box-sizing: content-box;
+    padding-left: gl.$side-gap;
+    @include gl.base-point-width;
+    text-align: right;
+  }
+
+  &_txt {
+    display: inline-block;
+    content: '';
+    position: relative;
+    top: 0;
+    z-index: 1;
+    transform: translate3d(0, 0, 1); // ios対策
+    width: auto;
+    max-width: gl.$base-point-sm;
+    @include gl.media-md {
+      max-width: gl.$base-point-md;
+    }
+    @include gl.media-lg {
+      max-width: gl.$base-point-lg;
+    }
+    text-align: right;
+
+    // テキストの背景色部分
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -5%;
+      z-index: -1;
+      transform: translate3d(0, 0, -1); // ios対策
+      width: 110%;
+      height: 100%;
+      background-color: gl.$theme-color-main;
+    }
+  }
+
+  /**
+   * modifier
+   */
+
+  // ライン左側のみ
+  &__l &_inner {
+    max-width: calc(#{gl.$base-point-sm} + #{gl.$side-gap});
+    @include gl.media-md {
+      max-width: calc(#{gl.$base-point-md} + #{gl.$side-gap});
+    }
+    @include gl.media-lg {
+      max-width: calc(#{gl.$base-point-lg} + #{gl.$side-gap});
+    }
+  }
+}

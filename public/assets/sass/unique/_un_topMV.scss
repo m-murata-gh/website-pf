@@ -1,0 +1,65 @@
+@use "settings/global" as gl;
+
+.un_topMV {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+
+  &_imgMain {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+
+    img {
+      padding: unset;
+      width: 100%;
+      @include gl.media-md {
+        padding: 0 10%;
+      }
+    }
+  }
+
+  &_imgSub1 {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 45%;
+  }
+
+  &_imgSub2 {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+  }
+
+  &_comment {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: gl.$theme-color-acc;
+    @include gl.fslh-x-lg;
+    @include gl.media-md {
+      @include gl.fslh-xx-lg;
+    }
+  }
+
+  // フキダシ内でのコメント表示範囲の設定
+  &_imgSub1 &_comment {
+    left: 32%;
+    width: 50%;
+  }
+
+  // フキダシ内でのコメント表示範囲の設定
+  &_imgSub2 &_comment {
+    left: 37%;
+    width: 55%;
+  }
+}

@@ -1,0 +1,16 @@
+@use "settings/global" as gl;
+@use "sass:math" as math;
+
+.bl_btnBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: gl.$vr-rem * 1;
+
+  &>* {
+    display: block;
+    margin: 0 math.div(gl.$gap, 2);
+  }
+}

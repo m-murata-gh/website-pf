@@ -1,0 +1,15 @@
+@use "sass:math";
+
+/**
+ * my-functions
+ */
+
+// 0.1remをかける
+@function rem($num) {
+  @return $num * 0.1rem;
+}
+
+// バーティカルリズムに対応したlh(単位なし)を返す
+@function vr-lh($vr-num, $txt) {
+  @return math.div($vr-num, $txt);
+}

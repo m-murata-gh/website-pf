@@ -1,0 +1,73 @@
+/**
+ * base
+ */
+@use "base/destyle";
+@use "base/base";
+
+/**
+ * layout
+ */
+@use "layout/ly_header";
+@use "layout/ly_footer";
+@use "layout/ly_breadcrumb";
+@use "layout/ly_top";
+@use "layout/ly_work";
+
+
+/**
+ * block
+ */
+@use "block/bl_inner";
+
+@use "block/bl_pcNav";
+@use "block/bl_lineTxt";
+@use "block/bl_card";
+@use "block/bl_txtBox";
+@use "block/bl_txtBoxUnit";
+@use "block/bl_iconBox";
+@use "block/bl_btnBox";
+@use "block/bl_caption";
+
+/* slideNav */
+@use "block/bl_slideNav";
+/* lightbox */
+@use "block/bl_lightbox";
+
+
+/**
+ * element
+ */
+@use "element/el_siteLogo";
+@use "element/el_copyright";
+@use "element/el_icon";
+@use "element/el_btn";
+@use "element/el_label";
+@use "element/el_heading";
+@use "element/el_desc";
+@use "element/el_visual";
+
+ /**
+  * unique
+  */
+@use "unique/un_topMV";
+@use "unique/un_topAbout";
+
+/**
+ * helper
+ */
+@use "helper/hp_bgi";
+@use "helper/hp_hov";
+
+// vr確認用 bese 24
+
+// * {
+//   background-color: unset !important;
+// }
+//
+// body {
+//   background: url(../../../docs/debug.png) !important;
+// }
+//
+// .news .vertical-posts .vertical-posts__item {
+//   color: black !important;
+// }

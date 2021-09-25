@@ -1,0 +1,126 @@
+@use "settings/global" as gl;
+
+.bl_card {
+
+  &:hover,
+  &:active {
+    color: gl.$theme-color-base;
+  }
+
+  &_inner {
+    display: block;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &_cont {
+    display: block;
+    position: relative;
+    width: calc(100% - 2em);
+    padding-top: 120%;
+    border: solid gl.$bw-bold gl.$theme-color-acc;
+  }
+
+  &_img {
+    display: block;
+    position: absolute;
+    top: 0;
+    padding-top: 100%;
+    width: 100%;
+
+    // カラーレイヤー
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: gl.$theme-color-acc2;
+      opacity: .4;
+    }
+  }
+
+  &_heading {
+    display: block;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+
+    &_ttl {
+      display: block;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      padding: 0 3%;
+      width: 100%;
+    }
+
+    &_label {
+      display: block;
+      position: absolute;
+      top: -(gl.$vr-rem * 1.5);
+      left: 3%;
+      padding: 0 3%;
+    }
+
+    &_time {
+      display: block;
+      position: relative;
+      // top: -(gl.$vr-rem * 1.5);
+      // right: 3%;
+      padding: 0 3%;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+
+  &_icon.el_icon {
+    margin-right: .1em;
+    transform: translateY(-5%);
+    @include gl.fslh-x-sm;
+  }
+
+  &_date {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: right;
+    color: gl.$theme-color-acc;
+    @include gl.fslh-lg;
+    line-height: calc(2em - #{gl.$bw-bold});
+    font-style: italic;
+    font-weight: bold;
+    transform-origin: bottom right;
+    transform: rotate(-90deg) translateX(calc(2em - (#{gl.$bw-bold} * 2)));
+  }
+
+
+
+  /**
+  * :hover
+  */
+
+  &:hover &_date {
+    color: gl.$theme-color-acc2;
+  }
+}
+
+// ラベルカラーの設定
+[data-labelcolor = "website"] {
+  background-color: gl.$theme-color-label1;
+}
+
+[data-labelcolor = "system"] {
+  background-color: gl.$theme-color-label2;
+}
+
+[data-labelcolor = "other"] {
+  background-color: gl.$theme-color-label3;
+}

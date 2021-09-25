@@ -1,0 +1,34 @@
+@use "settings/global" as gl;
+
+.ly_top {
+  padding-bottom: gl.$vr-rem * 3; // footerとの余白
+  background-color: gl.$theme-color-main;
+
+  &_topMV {
+    margin-top: gl.$vr-rem * 2;
+  }
+
+  &_indexTtl {
+    padding-top: gl.$vr-rem * 4;
+    padding-bottom: gl.$vr-rem * 3;
+    @include gl.fslh-xxxx-lg;
+    font-style: italic;
+    @include gl.media-md {
+      padding-bottom: gl.$vr-rem * 4;
+    }
+  }
+
+  &_cardUnit {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: gl.$gap;
+    row-gap: gl.$vr-rem * 2;
+    width: 100%;
+    @include gl.media-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include gl.media-lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

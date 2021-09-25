@@ -1,0 +1,28 @@
+@use "settings/global" as gl;
+
+.el_btn {
+  display: block;
+  padding: gl.$vr-rem * .25 1em;
+  width: max-content;
+  background-color: gl.$theme-color-base;
+  box-shadow: 0 #{gl.$vr-rem * .25} gl.$theme-color-acc;
+  color: gl.$theme-color-acc;
+  font-style: italic;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .1s;
+
+  &:link,
+  &:visited {
+    color: gl.$theme-color-acc;
+  }
+  &:hover,
+  &:active {
+    color: gl.$theme-color-acc2;
+  }
+
+  &:hover {
+    transform: translateY(gl.$vr-rem * .25);
+    box-shadow: 0 0 gl.$theme-color-acc;
+  }
+}

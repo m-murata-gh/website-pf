@@ -1,0 +1,66 @@
+@use "settings/global" as gl;
+
+$assets: '../images/';
+
+.hp_hov {
+
+  &__blink {
+
+    @keyframes blink {
+      0% {
+      opacity: .2
+      }
+      100% {
+      opacity: 1
+      }
+    }
+
+    &:hover {
+      animation: blink .5s 1 cubic-bezier(.165,.84,.44,1);
+    }
+  }
+
+  &__blink-lightbox {
+    @extend .hp_hov__blink;
+    display: block;
+    content: '';
+    position: absolute;
+    top: -(gl.$bw-bold);
+    left: -(gl.$bw-bold);
+    box-sizing: content-box;
+    width: 100%;
+    padding-top: 100%;
+    background-color: gl.$theme-color-main;
+    border: solid gl.$bw-bold gl.$theme-color-main;
+    opacity: 0;
+
+    @keyframes blink-lightbox {
+      0% {
+      opacity: .8;
+      }
+      100% {
+      opacity: 0;
+      }
+    }
+
+    &:hover {
+      animation-name: blink-lightbox;
+    }
+  }
+}
+
+.hp-blink {
+  @keyframes blink {
+  0% {
+  opacity: .2
+  }
+  100% {
+  opacity: 1
+  }
+}
+
+
+  animation: blink .5s 1 cubic-bezier(.165,.84,.44,1);
+
+
+}

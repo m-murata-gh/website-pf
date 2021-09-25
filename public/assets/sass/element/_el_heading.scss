@@ -1,0 +1,7 @@
+@use "settings/global" as gl;
+
+.el_heading {
+  @include gl.fslh-xx-lg;
+  font-style: italic;
+  white-space: nowrap;
+}

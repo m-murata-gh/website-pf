@@ -1,0 +1,22 @@
+@use "settings/global" as gl;
+
+.ly_header {
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: (gl.$vr-rem * .75) gl.$side-gap;
+  background-color: gl.$theme-color-base;
+  color: gl.$theme-color-main;
+
+  &_siteLogo {
+    @include gl.base-point-width;
+    text-align: right;
+    @include gl.fslh-xx-lg;
+  }
+
+  &_pcNav {
+    margin-left: gl.$gap;
+    width: max-content;
+    @include gl.fslh-x-lg;
+  }
+}

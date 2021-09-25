@@ -1,0 +1,141 @@
+@use "tools/my-functions" as my;
+
+/**
+ * global
+ */
+
+// バーティカルリズム
+$vr-num: 24; // バーティカルリズム値
+$vr-rem: my.rem($vr-num); // バーティカルリズム値(rem)
+
+// グリッド幅
+$gap: 5vw;
+$side-gap: 5vw; // スクリーン左右の余白
+
+ // サイト内のブロックの位置合わせ基準位置($side-gapは含まない)
+$base-point-sm: 200px;
+$base-point-md: 35vw;
+$base-point-lg: 25vw;
+@mixin base-point-width {
+  width: $base-point-sm;
+  min-width: max-content;
+  @include media-md {
+    width: $base-point-md;
+  }
+  @include media-lg {
+    width: $base-point-lg;
+  }
+}
+
+// サイトデザインに関わる線幅の統一
+$bw-thin: 2px;
+$bw-bold: 8px;
+
+// z-index
+$zindex-upper-top: 3; // ...stickyNav
+// $zindex-upper-mid: 2;
+// $zindex-upper-bottom: 1;
+// $zindex-lower-top: -1;
+// $zindex-lower-mid: -2;
+// $zindex-lower-bottom: -3;
+
+// メディアクエリmixin
+// media-sm
+@mixin media-sm {
+  @media screen and (max-width: 599px) { @content; }
+}
+// media-md
+@mixin media-md {
+  @media screen and (min-width: 600px) { @content; }
+}
+// media-lg
+@mixin media-lg {
+  @media screen and (min-width: 1200px) { @content; }
+}
+
+// テーマカラー
+$theme-color-base: #fff; // ベース #ホワイト
+$theme-color-main: #381; // メイン #グリーン
+$theme-color-acc: #244; // アクセント #ダークグリーン
+$theme-color-acc2: #fca; // アクセント2 #ピーチ
+$theme-color-warning: #f33; // 警告 #赤
+$theme-color-warning-light: #faa; // 警告 #うすい赤
+$theme-color-disabled: #888; // 非活性 #灰
+$theme-color-disabled-light: #ccc; // 非活性 #うすい灰
+$theme-color-label1: #f62; // オレンジ
+$theme-color-label2: #0cb; // ターコイズ
+$theme-color-label3: #ed0; // イエロー
+
+// テキストサイズ基準値
+$txt-base: 16;
+$txt-xxxx-lg: $txt-base + 42;
+$txt-xxx-lg: $txt-base + 32;
+$txt-xx-lg: $txt-base + 12;
+$txt-x-lg: $txt-base + 4;
+$txt-lg: $txt-base + 2;
+$txt-sm: $txt-base - 1;
+$txt-x-sm: $txt-base - 2;
+$txt-xx-sm: $txt-base - 4;
+
+// font-size
+$pc-fs-root: 62.5%;
+$sp-fs-root: 52.5%;
+$fs-base: my.rem($txt-base);
+$fs-xxxx-lg: my.rem($txt-xxxx-lg);
+$fs-xxx-lg: my.rem($txt-xxx-lg);
+$fs-xx-lg: my.rem($txt-xx-lg);
+$fs-x-lg: my.rem($txt-x-lg);
+$fs-lg: my.rem($txt-lg);
+$fs-sm: my.rem($txt-sm);
+$fs-x-sm: my.rem($txt-x-sm);
+$fs-xx-sm: my.rem($txt-xx-sm);
+
+// line-height
+$lh-base: my.vr-lh($vr-num, $txt-base);
+$lh-xxxx-lg: my.vr-lh($vr-num, $txt-xxxx-lg);
+$lh-xxx-lg: my.vr-lh($vr-num, $txt-xxx-lg);
+$lh-xx-lg: my.vr-lh($vr-num, $txt-xx-lg);
+$lh-x-lg: my.vr-lh($vr-num, $txt-x-lg);
+$lh-lg: my.vr-lh($vr-num, $txt-lg);
+$lh-sm: my.vr-lh($vr-num, $txt-sm);
+$lh-x-sm: my.vr-lh($vr-num, $txt-x-sm);
+$lh-xx-sm: my.vr-lh($vr-num, $txt-xx-sm);
+
+// テキストサイズ変更mixin...font-size&line-height
+// base
+@mixin fslh-base {
+  font-size: $fs-base;
+  line-height: $lh-base;
+}
+@mixin fslh-xxxx-lg {
+  font-size: $fs-xxxx-lg;
+  line-height: $lh-xxxx-lg;
+}
+@mixin fslh-xxx-lg {
+  font-size: $fs-xxx-lg;
+  line-height: $lh-xxx-lg;
+}
+@mixin fslh-xx-lg {
+  font-size: $fs-xx-lg;
+  line-height: $lh-xx-lg;
+}
+@mixin fslh-x-lg {
+  font-size: $fs-x-lg;
+  line-height: $lh-x-lg;
+}
+@mixin fslh-lg {
+  font-size: $fs-lg;
+  line-height: $lh-lg;
+}
+@mixin fslh-sm {
+  font-size: $fs-sm;
+  line-height: $lh-sm;
+}
+@mixin fslh-x-sm {
+  font-size: $fs-x-sm;
+  line-height: $lh-x-sm;
+}
+@mixin fslh-xx-sm {
+  font-size: $fs-xx-sm;
+  line-height: $lh-xx-sm;
+}

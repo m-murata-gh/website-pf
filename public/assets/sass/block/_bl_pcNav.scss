@@ -1,0 +1,27 @@
+@use "settings/global" as gl;
+
+.bl_pcNav {
+  display: none;
+  font-style: italic;
+  @include gl.media-lg {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      width: max-content;
+      margin-right: gl.$gap;
+
+      a {
+        display: block;
+      }
+    }
+
+    li:last-child {
+      margin-right: unset;
+    }
+  }
+}

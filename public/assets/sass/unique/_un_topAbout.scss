@@ -1,0 +1,33 @@
+@use "settings/global" as gl;
+
+.un_topAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include gl.media-lg {
+    flex-direction: row;
+  }
+
+  &_contImg {
+    display: block;
+    position: relative;
+    margin-bottom: gl.$vr-rem * 2;
+    @include gl.media-lg {
+      margin-right: gl.$gap * 1.5;
+      margin-bottom: unset;
+    }
+  }
+
+  &_img {
+    display: block;
+    width: 136px;
+    @include gl.media-lg {
+      width: 160px;
+    }
+  }
+
+  &_iconBox {
+    margin-top: gl.$vr-rem * 1;
+  }
+}

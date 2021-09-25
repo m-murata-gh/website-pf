@@ -1,0 +1,19 @@
+@use "settings/global" as gl;
+
+.el_siteLogo {
+  font-style: italic;
+  white-space: nowrap;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    span {
+      display: block;
+    }
+
+    span:first-child {
+      margin-bottom: gl.$vr-rem * .5;
+    }
+  }
+}

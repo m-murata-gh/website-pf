@@ -1,0 +1,46 @@
+@use "settings/global" as gl;
+
+:root {
+  width: 100%;
+  min-width: 320px;
+  font-size: gl.$sp-fs-root;
+  @include gl.media-md {
+    font-size: gl.$pc-fs-root;
+  }
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: gl.$theme-color-main;
+  color: gl.$theme-color-base;
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  letter-spacing: .16em;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  @include gl.fslh-base;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  &:link,
+  &:visited {
+    color: inherit;
+  }
+  &:hover,
+  &:active {
+    color: gl.$theme-color-acc2;
+  }
+}
+
+.cf:before,
+.cf:after {
+	display: table;
+	content: " ";
+}
+.cf:after {
+	clear: both;
+}

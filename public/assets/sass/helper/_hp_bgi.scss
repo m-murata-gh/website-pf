@@ -1,0 +1,17 @@
+@use "settings/global" as gl;
+
+$assets: '../images/';
+
+.hp_bgi {
+
+  /**
+  * common
+  */
+
+  &__common-scrolltop {
+   background-image: url(#{$assets}common-scrolltop.svg) !important;
+  }
+
+
+
+}

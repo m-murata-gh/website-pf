@@ -1,0 +1,22 @@
+@use "settings/global" as gl;
+
+.el_label {
+  padding: 0 1%;
+  width: max-content;
+  border: solid 1px gl.$theme-color-base;
+  border-radius: .25em;
+
+  /**
+   * modifier
+   */
+
+  &__index {
+    padding: 0 3%;
+    border-color: gl.$theme-color-acc;
+    border-width: gl.$bw-thin;
+    border-radius: unset;
+    color: gl.$theme-color-acc;
+    font-style: italic;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,7 @@
+@use "settings/global" as gl;
+
+.el_copyright {
+  text-align: center;
+  font-style: italic;
+  @include gl.fslh-xx-sm;
+}

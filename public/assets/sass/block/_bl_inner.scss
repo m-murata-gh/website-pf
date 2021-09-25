@@ -1,0 +1,20 @@
+@use "settings/global" as gl;
+
+.bl_inner {
+  margin: 0 auto;
+  padding: 0 gl.$side-gap;
+  width: 100%;
+  max-width: calc(1440px + #{gl.$side-gap * 2});
+
+  /**
+   * modifier
+   */
+
+  &__sm {
+  max-width: calc(1024px + #{gl.$side-gap * 2});
+  }
+
+  &__x-sm {
+  max-width: calc(720px + #{gl.$side-gap * 2});
+  }
+}

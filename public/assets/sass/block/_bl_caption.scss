@@ -1,0 +1,75 @@
+@use "settings/global" as gl;
+
+.bl_caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  &_ttl {
+    width: 100%;
+    text-align: left;
+    @include gl.fslh-x-lg;
+  }
+
+  &_date {
+    margin-top: gl.$vr-rem * .5;
+    width: 100%;
+    text-align: right;
+    @include gl.fslh-lg;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &_line {
+    display: block;
+    content: '';
+    margin-top: gl.$vr-rem * .5;
+    width: 100%;
+    height: gl.$bw-thin;
+    background-color: gl.$theme-color-base;
+  }
+
+  &_time {
+    margin-top: gl.$vr-rem * .5;
+    width: 100%;
+    text-align: right;
+    @include gl.fslh-x-sm;
+
+    &_main,
+    &_sub {
+      display: inline-block;
+    }
+
+    &_main {
+      font-style: italic;
+      font-weight: bold;
+      @include gl.fslh-base;
+    }
+  }
+
+  &_labelUnit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    row-gap: gl.$vr-rem * .25;
+    margin-top: gl.$vr-rem * .5;
+    width: 100%;
+
+    &>* {
+      margin-left: 2vw;
+      @include gl.media-md {
+        margin-left: 1vw;
+      }
+    }
+  }
+
+  &_icon.el_icon {
+    vertical-align: baseline;
+  }
+
+  &_txtBoxUnit {
+    margin-top: gl.$vr-rem * 2;
+  }
+}

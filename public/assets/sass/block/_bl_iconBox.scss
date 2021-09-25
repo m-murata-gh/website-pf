@@ -1,0 +1,15 @@
+@use "settings/global" as gl;
+
+.bl_iconBox {
+  display: flex;
+
+  &>* {
+    display: block;
+    margin-right: 1em;
+    width: max-content;
+
+    &:last-child {
+      margin-right: unset;
+    }
+  }
+}

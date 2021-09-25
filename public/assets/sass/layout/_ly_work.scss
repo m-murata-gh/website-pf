@@ -1,0 +1,26 @@
+@use "settings/global" as gl;
+
+.ly_work {
+  padding-bottom: gl.$vr-rem * 3; // footerとの余白
+  background-color: gl.$theme-color-main;
+
+  &_breadcrumbs {
+    margin-top: gl.$vr-rem * 1;
+  }
+
+  &_MV {
+    margin-top: gl.$vr-rem * 3;
+
+    &_btnBox {
+      margin-top: gl.$vr-rem * 2;
+    }
+  }
+
+  &_caption {
+    margin-top: gl.$vr-rem * 4;
+  }
+
+  &_lightbox {
+    margin-top: gl.$vr-rem * 3;
+  }
+}

@@ -1,0 +1,16 @@
+@use "settings/global" as gl;
+
+.el_icon {
+  display: block;
+  width: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+
+  /* modifier */
+
+  // SNSアイコン
+  &__sns {
+    width: 1em;
+    @include gl.fslh-xx-lg;
+  }
+}

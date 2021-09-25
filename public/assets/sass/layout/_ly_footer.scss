@@ -1,0 +1,14 @@
+@use "settings/global" as gl;
+
+.ly_footer {
+  overflow: hidden;
+  padding: (gl.$vr-rem * 2) gl.$side-gap;
+  background-color: gl.$theme-color-acc;
+  color: gl.$theme-color-base;
+
+  &_siteLogo {
+    @include gl.base-point-width;
+    margin-bottom: gl.$vr-rem * 2;
+    @include gl.fslh-lg;
+  }
+}

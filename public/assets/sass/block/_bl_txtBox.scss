@@ -1,0 +1,61 @@
+@use "settings/global" as gl;
+
+.bl_txtBox {
+  // media-md未満の時はflexレイアウト
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &_contHeading,
+  &_contDesc {
+    display: block;
+  }
+
+  &_contHeading {
+    align-self: flex-start;
+  }
+
+  &_contDesc {
+    padding-left: gl.$gap;
+
+    &>*:last-child {
+      // margin-bottom: unset;
+    }
+  }
+
+  &_heading {
+    margin-bottom: (gl.$vr-rem * .75);
+  }
+
+  &_desc {
+    margin-bottom: (gl.$vr-rem * .5);
+  }
+
+  // media-md以上の時はtableレイアウト
+  @include gl.media-md {
+    display: table-row;
+    table-layout: fixed;
+
+    &_contHeading,
+    &_contDesc {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    &_contHeading {
+      padding-right: gl.$gap;
+      text-align: right;
+      overflow-wrap: break-word;
+    }
+
+    &_contDesc {
+      padding-left: unset;
+    }
+
+    &_heading,
+    &_desc {
+      // margin-bottom: unset;
+    }
+  }
+}
