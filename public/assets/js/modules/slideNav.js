@@ -39,7 +39,6 @@ menuList.addEventListener('click', (e) => {
 menuLinks = Array.from(menuLinks) ;
 menuLinks.forEach(element => {
   element.addEventListener('click', (e) => {
-    console.log('menuLink');
     removeActiveClass();
     e.stopPropagation();
   }, false);

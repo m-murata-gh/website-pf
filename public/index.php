@@ -13,20 +13,20 @@ echo <<<HTML
 <main class="ly_top">
 
 <!-- [MV] -->
-<section>
+<section id="MV">
   <div class="bl_inner bl_inner__sm">
     <div class="un_topMV ly_top_topMV">
       <div class="un_topMV_imgMain">
-        <img src="{$GLOBALS['contVar']['url']['root']}assets/images/MV-faces.svg" alt="">
+        <img class="js_tada_repeat" src="{$GLOBALS['contVar']['url']['root']}assets/images/MV-faces.svg" alt="">
       </div>
       <!-- /.un_topMV_imgMain -->
       <div class="un_topMV_imgSub1">
-        <img src="{$GLOBALS['contVar']['url']['root']}assets/images/MV-fukidashi1.svg" alt="">
+        <img class="js_shakeX_repeat" src="{$GLOBALS['contVar']['url']['root']}assets/images/MV-fukidashi1.svg" alt="">
         <p class="un_topMV_comment">!!</p>
       </div>
       <!-- /.un_topMV_imgSub1 -->
       <div class="un_topMV_imgSub2">
-        <img src="{$GLOBALS['contVar']['url']['root']}assets/images/MV-fukidashi2.svg" alt="">
+        <img class="js_shakeX_repeat" src="{$GLOBALS['contVar']['url']['root']}assets/images/MV-fukidashi2.svg" alt="">
         <p class="un_topMV_comment">welcome</p>
       </div>
       <!-- /.un_topMV_imgSub2 -->
@@ -50,7 +50,7 @@ echo <<<HTML
   <!-- /.bl_lineTxt -->
 
   <div class="bl_inner">
-    <div class="ly_top_cardUnit">
+    <div class="ly_top_cardUnit js_bounceInRight">
 HTML;
 
 showCard('website-pf');
@@ -78,7 +78,7 @@ echo <<<HTML
   <!-- /.bl_lineTxt -->
 
   <div class="bl_inner">
-    <div class="ly_top_cardUnit">
+    <div class="ly_top_cardUnit js_bounceInRight">
 HTML;
 
 showCard('system-reservedc');
@@ -104,7 +104,7 @@ echo <<<HTML
   <!-- /.bl_lineTxt -->
 
   <div class="bl_inner">
-    <div class="ly_top_cardUnit">
+    <div class="ly_top_cardUnit js_bounceInRight">
 HTML;
 
 showCard('other-emplosbanner');

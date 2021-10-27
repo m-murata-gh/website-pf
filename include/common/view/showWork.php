@@ -4,7 +4,7 @@
  */
 
 function showWork($cd): void {
-  
+
   showHeader($cd );
   showBreadcrumb($cd);
 
@@ -15,7 +15,7 @@ function showWork($cd): void {
     <!-- [MV] -->
     <section class="ly_work_MV">
       <div class="bl_inner bl_inner__sm">
-          <div class="el_visual" style="background: center / cover no-repeat url({$GLOBALS['contVar']['imgMain'][$cd]})"></div>
+          <div class="el_visual js_flipInX" style="background: center / cover no-repeat url({$GLOBALS['contVar']['imgMain'][$cd]})"></div>
           <!-- /.el_visual -->
   HTML;
 

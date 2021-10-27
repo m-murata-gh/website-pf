@@ -17,7 +17,7 @@ echo <<<HTML
   <link rel="icon" type="image/x-icon" href="{$GLOBALS['contVar']['url']['root']}assets/images/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="{$GLOBALS['contVar']['url']['root']}assets/images/apple-touch-icon.png">
   <script src="https://kit.fontawesome.com/82ce522d6d.js" crossorigin="anonymous"></script>
-  <script defer type="module" src="{$GLOBALS['contVar']['url']['root']}assets/js/index.js"></script>
+  <script type="module" src="{$GLOBALS['contVar']['url']['root']}assets/js/index.js"></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@ echo <<<HTML
       <h1><a href="{$GLOBALS['contVar']['url']['root']}"><span>MISA MURATA</span><span>PORTFOLIO SITE</span></a></h1>
     </div>
     <!-- /.el_siteLogo -->
-    <div class="bl_pcNav ly_header_pcNav">
+    <div class="bl_pcNav ly_header_pcNav js_bounceInRight_onlyTop">
       <ul>
         <li><a href="{$GLOBALS['contVar']['url']['website']}">WEBSITE</a>
         <li><a href="{$GLOBALS['contVar']['url']['system']}">SYSTEM</a>

@@ -60,14 +60,14 @@ $thumbAssets: '../../assets/images/lightbox/thumb/';
       left: 0;
       right: 0;
       background-color: rgba(gl.$theme-color-main, .95);
-      cursor: url(http://localhost/test/public/close.png), pointer; // close
+      cursor: url(../images/lightbox/close.png), pointer; // close
     }
 
     &_cont {
       position: relative;
       z-index: 1;
       width: max-content;
-      cursor: url(http://localhost/test/public/close.png), pointer; // close
+      cursor: url(../images/lightbox/close.png), pointer; // close
 
       >img {
         display: block;
@@ -86,11 +86,11 @@ $thumbAssets: '../../assets/images/lightbox/thumb/';
       left: 0;
       z-index: 1;
       width: 28%;
-      cursor: url(http://localhost/test/public/prev.png), pointer; // prev
+      cursor: url(../images/lightbox/prev.png), pointer; // prev
       // background-color: rgba(blue, .5); // DEBUG:
 
       &[data-itemlink="0"] {
-        cursor: url(http://localhost/test/public/prev_off.png), pointer; // prev_off
+        cursor: url(../images/lightbox/prev_off.png), pointer; // prev_off
       }
     }
 
@@ -103,11 +103,11 @@ $thumbAssets: '../../assets/images/lightbox/thumb/';
       right: 0;
       z-index: 1;
       width: 30%;
-      cursor: url(http://localhost/test/public/next.png), pointer; // next
+      cursor: url(../images/lightbox/next.png), pointer; // next
       // background-color: rgba(red, .5); // DEBUG:
 
       &[data-itemlink="0"] {
-        cursor: url(http://localhost/test/public/next_off.png), pointer; // next_off
+        cursor: url(../images/lightbox/next_off.png), pointer; // next_off
       }
     }
   }
